@@ -1,0 +1,76 @@
+@layer base {
+  .flask {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .neck {
+    width: 2.5rem;
+    height: 3rem;
+    background: linear-gradient(to right, 
+      rgba(200, 220, 255, 0.3), 
+      rgba(230, 240, 255, 0.5), 
+      rgba(200, 220, 255, 0.3)
+    );
+    border: 2px solid rgba(100, 120, 150, 0.6);
+    border-bottom: none;
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm);
+    box-shadow: 
+      inset 2px 0 4px rgba(255, 255, 255, 0.5),
+      inset -2px 0 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 2;
+  }
+
+  .body {
+    width: 13rem;
+    height: 16rem;
+    background: linear-gradient(to right, 
+      rgba(200, 220, 255, 0.2), 
+      rgba(230, 240, 255, 0.4), 
+      rgba(200, 220, 255, 0.2)
+    );
+    border-left: 2px solid rgba(100, 120, 150, 0.6);
+    border-right: 2px solid rgba(100, 120, 150, 0.6);
+    border-bottom: 2px solid rgba(100, 120, 150, 0.6);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      inset 4px 0 8px rgba(255, 255, 255, 0.5),
+      inset -4px 0 8px rgba(0, 0, 0, 0.1),
+      var(--shadow-lg);
+    /* Create conical Erlenmeyer shape - tapers outward from top to bottom */
+    clip-path: polygon(19% 0%, 81% 0%, 100% 100%, 0% 100%);
+  }
+
+  .solution {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(200, 220, 255, 0.3);
+    transition: 
+      height 0.5s ease-out,
+      background-color 0.8s ease-out;
+    /* Match the conical shape of the body */
+    clip-path: polygon(19% 0%, 81% 0%, 100% 100%, 0% 100%);
+  }
+
+  .shine {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 30%;
+    height: 60%;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.4) 0%, 
+      rgba(255, 255, 255, 0.1) 50%, 
+      transparent 100%
+    );
+    border-radius: 50%;
+    pointer-events: none;
+  }
+}

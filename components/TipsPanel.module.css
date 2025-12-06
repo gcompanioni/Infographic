@@ -1,0 +1,67 @@
+.container {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+}
+
+.sectionTitle {
+  font-family: var(--font-family-heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--card-foreground);
+  margin: 0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-3);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--card-foreground);
+  padding: var(--spacing-2) var(--spacing-3);
+  background: var(--muted);
+  border-radius: var(--radius-sm);
+}
+
+.bullet {
+  color: var(--error);
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-top: -0.125rem;
+}
+
+.bulletSuccess {
+  color: var(--success);
+  font-weight: 700;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+  margin-top: -0.125rem;
+}

@@ -1,0 +1,109 @@
+@layer base {
+  .burette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  .stopcock {
+    width: 2rem;
+    height: 1rem;
+    background: linear-gradient(135deg, #888, #aaa);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+    margin-bottom: 0.25rem;
+  }
+
+  .tube {
+    width: 3rem;
+    height: 25rem;
+    background: linear-gradient(to right, 
+      rgba(200, 220, 255, 0.3), 
+      rgba(230, 240, 255, 0.5), 
+      rgba(200, 220, 255, 0.3)
+    );
+    border: 2px solid rgba(100, 120, 150, 0.6);
+    border-radius: var(--radius-sm);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 
+      inset 2px 0 4px rgba(255, 255, 255, 0.5),
+      inset -2px 0 4px rgba(0, 0, 0, 0.1),
+      var(--shadow-md);
+  }
+
+  .marking {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .markingLine {
+    width: 0.5rem;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  .markingLabel {
+    font-size: 0.625rem;
+    font-family: var(--font-family-monospace);
+    color: var(--foreground);
+    padding: 0 var(--spacing-1);
+    background-color: var(--background);
+    border-radius: var(--radius-sm);
+    margin-left: var(--spacing-1);
+  }
+
+  .liquid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, 
+      rgba(100, 180, 255, 0.7), 
+      rgba(80, 150, 255, 0.8)
+    );
+    transition: height 0.5s ease-out;
+    border-top-left-radius: var(--radius-sm);
+    border-top-right-radius: var(--radius-sm);
+  }
+
+  .tip {
+    width: 0;
+    height: 0;
+    border-left: 0.75rem solid transparent;
+    border-right: 0.75rem solid transparent;
+    border-top: 1rem solid rgba(100, 120, 150, 0.6);
+  }
+
+  .droplet {
+    position: absolute;
+    bottom: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5rem;
+    height: 0.75rem;
+    background: radial-gradient(ellipse at center, 
+      rgba(100, 180, 255, 0.9), 
+      rgba(80, 150, 255, 1)
+    );
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    animation: dropAnimation 0.5s ease-in;
+  }
+
+  @keyframes dropAnimation {
+    0% {
+      bottom: 0;
+      opacity: 1;
+    }
+    100% {
+      bottom: -8rem;
+      opacity: 0;
+    }
+  }
+}

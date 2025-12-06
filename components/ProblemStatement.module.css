@@ -1,0 +1,87 @@
+.container {
+  background: var(--card);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-lg);
+  border-left: 4px solid var(--primary);
+}
+
+.title {
+  font-family: var(--font-family-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+    color: #ffffff;
+  margin-bottom: var(--spacing-4);
+}
+
+.subtitle {
+  font-family: var(--font-family-heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: var(--spacing-2);
+}
+
+.preCalculation {
+  background: rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-4);
+  border: 1px solid var(--border);
+}
+
+.calcText {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-1);
+}
+
+.equation {
+  font-family: var(--font-family-monospace);
+  color: #ffffff;
+  margin-bottom: var(--spacing-1);
+}
+
+.result {
+  font-family: var(--font-family-monospace);
+  color: var(--success);
+  font-weight: bold;
+}
+
+.problem {
+  background: var(--muted);
+  padding: var(--spacing-4);
+  border-radius: var(--radius);
+  margin-bottom: var(--spacing-4);
+}
+
+.problemText {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+    color: #ffffff;
+  margin: 0;
+}
+
+.keyPoints {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.keyPoint {
+  display: flex;
+  gap: var(--spacing-3);
+  font-size: 0.9375rem;
+}
+
+.label {
+  font-weight: 600;
+  color: var(--muted-foreground);
+  min-width: 4rem;
+}
+
+.value {
+    color: #ffffff;
+  font-family: var(--font-family-monospace);
+  font-size: 0.875rem;
+}
