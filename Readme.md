@@ -1,9 +1,6 @@
 # Narrated Interactive Simulation Environment
         
-do you also make simulations that arent websites? like a narrated simulation almost? 
 
-
-Made with Floot.
 
 # Instructions
 
